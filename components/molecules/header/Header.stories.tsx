@@ -12,14 +12,14 @@ export default {
   },
 } as ComponentMeta<typeof Header>;
 
-const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
-
-export const LoggedIn = Template.bind({});
-LoggedIn.args = {
-  user: {
-    name: 'Jane Doe',
-  },
-};
-
-export const LoggedOut = Template.bind({});
-LoggedOut.args = {};
+export const LoggedIn: ComponentStory<typeof Header> = () => (
+  <Header >
+    <h1 slot='start'>Company Name</h1>,
+    <h2 slot='center'>Welcome Message</h2>,
+    <div slot='end' className='header-menu'>
+      <p>Home</p>
+      <p>About</p>
+      <p>Login</p>
+    </div>
+  </Header>
+);
