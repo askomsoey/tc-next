@@ -2,12 +2,16 @@ import React from 'react';
 
 import './header.scss';
 
-interface HeaderProps {  }
+interface HeaderProps {
+  start: JSX.Element,
+  center: JSX.Element,
+  end: JSX.Element,
+}
 
-export const Header = ({}: HeaderProps) => (
+export const Header = ({ start, center, end }: HeaderProps) => (
   <header>
-    <slot name='start' />
-    <slot name='center'/>
-    <slot name='end' />
+    <div className='start'>{start}</div>
+    <div className='center'>{center}</div>
+    <div className='end'>{end}</div>
   </header>
 );
