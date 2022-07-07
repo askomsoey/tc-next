@@ -14,10 +14,10 @@ export default {
 
 export const LoggedIn: ComponentStory<typeof Header> = () => (
   <Header
-    start={<h1 slot='start'>Company Name</h1>}
-    center={<h2 slot='center'>Welcome Message</h2>}
+    start={<h1>Company Name</h1>}
+    center={<h2>Welcome Message</h2>}
     end={
-      <div slot='end' className='header-menu'>
+      <div className='header-menu'>
         <p>Home</p>
         <p>About</p>
         <p>Login</p>

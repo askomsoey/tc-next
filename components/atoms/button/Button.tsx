@@ -1,11 +1,12 @@
 import React from 'react';
-import './button.scss';
+import { TButtonSize, TButtonType } from '../../../shared/interface/button';
+import styles from './button.module.scss';
 
 interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
-  primary?: boolean;
+  type?: TButtonType;
   /**
    * What background color to use
    */
@@ -13,7 +14,7 @@ interface ButtonProps {
   /**
    * How large should the button be?
    */
-  size?: 'small' | 'medium' | 'large';
+  size?: TButtonSize;
   /**
    * Button contents
    */
@@ -28,17 +29,16 @@ interface ButtonProps {
  * Primary UI component for user interaction
  */
 export const Button = ({
-  primary = false,
+  type = 'primary',
   size = 'medium',
   backgroundColor,
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      className={`${styles.button} ${styles[size]} ${styles[type]}`}
       style={{ backgroundColor }}
       {...props}
     >

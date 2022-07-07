@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './header.scss';
+import styles from './header.module.scss';
 
 interface HeaderProps {
   start: JSX.Element,
@@ -9,9 +9,9 @@ interface HeaderProps {
 }
 
 export const Header = ({ start, center, end }: HeaderProps) => (
-  <header>
-    <div className='start'>{start}</div>
-    <div className='center'>{center}</div>
-    <div className='end'>{end}</div>
+  <header className={styles.container}>
+    <div className={styles.start}>{start}</div>
+    <div className={styles.center}>{center}</div>
+    <div className={styles.end}>{end}</div>
   </header>
 );
