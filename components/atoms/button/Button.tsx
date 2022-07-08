@@ -12,6 +12,10 @@ interface ButtonProps {
    */
   backgroundColor?: string;
   /**
+   * What text color to use
+   */
+  textColor?: string;
+  /**
    * How large should the button be?
    */
   size?: TButtonSize;
@@ -32,14 +36,15 @@ export const Button = ({
   type = 'primary',
   size = 'medium',
   backgroundColor,
+  textColor,
   label,
   ...props
 }: ButtonProps) => {
   return (
     <button
-      type="button"
+      type='button'
       className={`${styles.button} ${styles[size]} ${styles[type]}`}
-      style={{ backgroundColor }}
+      style={{ backgroundColor, color: textColor }}
       {...props}
     >
       {label}
