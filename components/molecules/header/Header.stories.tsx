@@ -12,7 +12,7 @@ export default {
   },
 } as ComponentMeta<typeof Header>;
 
-export const LoggedIn: ComponentStory<typeof Header> = () => (
+export const Default: ComponentStory<typeof Header> = () => (
   <Header
     start={<h1>Company Name</h1>}
     center={<h2>Welcome Message</h2>}
