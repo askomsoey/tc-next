@@ -15,12 +15,6 @@
   background-color: transparent;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
 }
-.transparent {
-  color: #333;
-  background-color: transparent;
-  box-shadow: none;
-  border: none;
-}
 .small {
   font-size: 12px;
   padding: 10px 16px;
@@ -32,4 +26,21 @@
 .large {
   font-size: 16px;
   padding: 12px 24px;
+}
+
+.transparent {
+  color: #333;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+
+  &.small {
+    padding: 7.5px 12px;
+  }
+  &.medium {
+    padding: 8px 15px;
+  }
+  &.large {
+    padding: 9px 18px;
+  }
 }
