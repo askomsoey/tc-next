@@ -2,8 +2,10 @@ import React from 'react';
 
 import styles from './navbar.module.scss';
 
-interface NavbarProps {}
+interface NavbarProps {
+  children: JSX.Element[];
+}
 
-export const Navbar = ({}: NavbarProps) => (
-  <div className={styles.container}></div>
+export const Navbar = ({ children }: NavbarProps) => (
+  <div className={styles.container}>{children}</div>
 );
