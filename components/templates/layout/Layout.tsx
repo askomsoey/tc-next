@@ -3,6 +3,7 @@ import styles from './layout.module.scss';
 import { Button } from '../../atoms/button/Button';
 import { Header } from '../../molecules/header/Header';
 import { Navbar } from '../../molecules/navbar/Navbar';
+import { Footer } from '../../molecules/footer/Footer';
 
 interface LayoutProps {
   children?: JSX.Element;
@@ -35,6 +36,9 @@ export const Layout = ({ children }: LayoutProps) => (
         </Navbar>
       }
     />
-    {children} {/*TODO: Add footer*/}
+    {children}
+    <Footer>
+      <p>TODO: Add footer content</p>
+    </Footer>
   </div>
 );
