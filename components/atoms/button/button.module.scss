@@ -38,6 +38,12 @@
   border: none;
   margin: 0;
 
+  &:hover {
+    text-decoration: underline;
+    transition: all .1s ease-in-out;
+    transform: scale(115%);
+  }
+
   &.small {
     padding: 7.5px 12px;
   }
