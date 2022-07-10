@@ -3,9 +3,9 @@ import React from 'react';
 import styles from './header.module.scss';
 
 interface HeaderProps {
-  start: JSX.Element,
-  center: JSX.Element,
-  end: JSX.Element,
+  start?: JSX.Element;
+  center?: JSX.Element;
+  end?: JSX.Element;
 }
 
 export const Header = ({ start, center, end }: HeaderProps) => (
