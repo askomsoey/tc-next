@@ -12,4 +12,12 @@ export default {
   },
 } as ComponentMeta<typeof Navbar>;
 
-export const Default: ComponentStory<typeof Navbar> = () => <Navbar />;
+export const Default: ComponentStory<typeof Navbar> = () => (
+  <Navbar
+    children={[
+      <Button key={'button-1'} label='Button 1' />,
+      <Button key={'button-2'} label='Button 2' />,
+      <Button key={'button-3'} label='Button 3' />,
+    ]}
+  />
+);

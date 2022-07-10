@@ -18,14 +18,17 @@
 .small {
   font-size: 12px;
   padding: 10px 16px;
+  margin: 0 4px;
 }
 .medium {
   font-size: 14px;
   padding: 11px 20px;
+  margin: 0 4px;
 }
 .large {
   font-size: 16px;
   padding: 12px 24px;
+  margin: 0 6px;
 }
 
 .transparent {
@@ -33,6 +36,7 @@
   background-color: transparent;
   box-shadow: none;
   border: none;
+  margin: 0;
 
   &.small {
     padding: 7.5px 12px;

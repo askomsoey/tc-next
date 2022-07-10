@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './navbar.module.scss';
 
 interface NavbarProps {
-  children: JSX.Element[];
+  children?: JSX.Element[];
 }
 
 export const Navbar = ({ children }: NavbarProps) => (
