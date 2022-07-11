@@ -38,7 +38,9 @@ export const Layout = ({ children }: LayoutProps) => (
     />
     {children}
     <Footer>
-      <p>TODO: Add footer content</p>
+      <p style={{ paddingLeft: '0.5rem' }}>
+        © Tsering Choekey Tamang, {new Date().getFullYear()}
+      </p>
     </Footer>
   </div>
 );
