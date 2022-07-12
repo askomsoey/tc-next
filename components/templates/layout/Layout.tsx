@@ -6,10 +6,10 @@ import { Navbar } from '../../molecules/navbar/Navbar';
 import { Footer } from '../../molecules/footer/Footer';
 
 interface LayoutProps {
-  children?: JSX.Element;
+  children?: JSX.Element | JSX.Element[];
 }
 
-export const Layout = ({ children }: LayoutProps) => (
+export const Layout = ({ children = [] }: LayoutProps) => (
   <div className={styles.container}>
     <Header
       start={
@@ -27,7 +27,7 @@ export const Layout = ({ children }: LayoutProps) => (
           TODO LOGO
         </p>
       }
-      center={<h3>TODO WELCOME MESSAGE?</h3>}
+      center={<h3>Welcome to Ms. Tamang's Business Website</h3>}
       end={
         <Navbar>
           <Button label='Home' type='transparent' />
