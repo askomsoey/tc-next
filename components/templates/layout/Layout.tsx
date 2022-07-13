@@ -6,10 +6,11 @@ import { Navbar } from '../../molecules/navbar/Navbar';
 import { Footer } from '../../molecules/footer/Footer';
 
 interface LayoutProps {
+  isLoggedIn?: boolean;
   children?: JSX.Element | JSX.Element[];
 }
 
-export const Layout = ({ children = [] }: LayoutProps) => (
+export const Layout = ({ isLoggedIn = false, children = [] }: LayoutProps) => (
   <div className={styles.container}>
     <Header
       start={
@@ -32,7 +33,11 @@ export const Layout = ({ children = [] }: LayoutProps) => (
         <Navbar>
           <Button label='Home' type='transparent' />
           <Button label='About' type='transparent' />
-          <Button label='Login' type='transparent' />
+          {isLoggedIn ? (
+            <Button label='Log Out' type='transparent' />
+          ) : (
+            <Button label='Login' type='transparent' />
+          )}
         </Navbar>
       }
     />
