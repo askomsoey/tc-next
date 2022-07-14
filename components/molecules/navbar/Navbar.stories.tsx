@@ -5,7 +5,7 @@ import { Navbar } from './Navbar';
 import { Button } from '../../atoms/button/Button';
 
 export default {
-  title: 'Molucules/Navbar',
+  title: 'Molecules/Navbar',
   component: Navbar,
   parameters: {
     layout: 'fullscreen',

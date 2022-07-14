@@ -2,11 +2,9 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Footer } from './Footer';
-import { Button } from '../../atoms/button/Button';
-import { Navbar } from '../navbar/Navbar';
 
 export default {
-  title: 'Molucules/Footer',
+  title: 'Molecules/Footer',
   component: Footer,
   parameters: {
     layout: 'fullscreen',

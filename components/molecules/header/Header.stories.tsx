@@ -6,7 +6,7 @@ import { Button } from '../../atoms/button/Button';
 import { Navbar } from '../navbar/Navbar';
 
 export default {
-  title: 'Molucules/Header',
+  title: 'Molecules/Header',
   component: Header,
   parameters: {
     layout: 'fullscreen',
