@@ -1,3 +1,4 @@
+import { entities } from './entities';
 import { files } from './files';
 import { media } from './media';
 import { numbers } from './numbers';
@@ -8,5 +9,5 @@ export const Mocker = {
   files,
   text,
   numbers,
-  entities: {},
+  entities,
 };
