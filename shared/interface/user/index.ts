@@ -6,6 +6,6 @@ export interface IUser {
   email?: string;
   username?: string;
   bio?: string;
-  profileHeaderImg?: string | StaticImageData;
-  profileImg?: string | StaticImageData;
+  profileHeaderImg?: string;
+  profileImg?: string;
 }

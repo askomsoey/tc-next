@@ -47,8 +47,8 @@ export const user = (idx: number = 0): IUser => ({
     ? lastNames[idx]
     : lastNames[idx % 9]
   ).toLowerCase()}`,
-  profileImg: media.image(idx),
-  profileHeaderImg: media.image(idx + 1),
+  profileImg: media.image(idx).src,
+  profileHeaderImg: media.image(idx + 1).src,
 });
 
 export const users = (length: number): IUser[] =>
