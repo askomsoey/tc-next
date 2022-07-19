@@ -25,17 +25,27 @@ const lastNames: string[] = [
   'Mozart',
 ];
 
+const domains = ['hotmail', 'gmail', 'yahoo', 'protonmail', 'yoobic'];
+
 export const user = (idx: number = 0): IUser => ({
-  firstName: idx < firstNames.length ? firstNames[idx] : firstNames[idx % 10],
-  lastName: idx < lastNames.length ? lastNames[idx] : lastNames[idx % 10],
+  firstName: idx < firstNames.length ? firstNames[idx] : firstNames[idx % 9],
+  lastName: idx < lastNames.length ? lastNames[idx] : lastNames[idx % 9],
   bio: text.sentence(idx),
-  email: '',
-  username: `@${(idx < firstNames.length
+  email: `${(idx < firstNames.length
     ? firstNames[idx]
-    : firstNames[idx % 10]
+    : firstNames[idx % 9]
   ).toLowerCase()}${(idx < lastNames.length
     ? lastNames[idx]
-    : lastNames[idx % 10]
+    : lastNames[idx % 9]
+  ).toLowerCase()}@${
+    idx < domains.length ? domains[idx] : domains[idx % 5]
+  }.com`,
+  username: `@${(idx < firstNames.length
+    ? firstNames[idx]
+    : firstNames[idx % 9]
+  ).toLowerCase()}${(idx < lastNames.length
+    ? lastNames[idx]
+    : lastNames[idx % 9]
   ).toLowerCase()}`,
   profileImg: media.image(idx),
   profileHeaderImg: media.image(idx + 1),
